@@ -69,12 +69,11 @@ app.get('/content', auth, function(req, res) {
   res.render('content');
 });
 
-
-app.get('/logout', function(req, res) {
+app.post('/logout', function(req, res) {
   req.session.destroy();
   res.render('logout');
-
 });
+
 
 
 app.listen(3000, function() {
